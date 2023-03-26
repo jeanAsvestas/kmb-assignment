@@ -1,0 +1,15 @@
+.article-grid {
+  margin-top: 70px;
+}
+
+.article-filters {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,10 +1,10 @@
+import { ArticleGrid } from '../../components/article-grid/article-grid';
 import './Home.scss';
-import { Movies } from '../../components/kmb-movie/kmb-movie-comp';
 
 export const Home = () => {
   return (
     <>
-      <Movies />
+      <ArticleGrid />
     </>
   );
 };
