@@ -10,15 +10,10 @@ export const App = () => {
       <Router>
         <NavBar />
         <br />
-
         <Routes>
           <Route path="*" element={<p>Not Found</p>} />
           <Route path="">
             <Route index element={<Home />} />
-            <Route
-              path="movies"
-              element={<p className="main-container">Movies!</p>}
-            ></Route>
           </Route>
         </Routes>
       </Router>
