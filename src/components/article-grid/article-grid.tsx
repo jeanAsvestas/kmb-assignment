@@ -14,20 +14,21 @@ export const ArticleGrid = () => {
   const [page, setPage] = useState(1);
   const [sortingOption, setSortingOption] =
     useState<SortingOption>('newest-first');
+  const [searchInput, setSearchInput] = useState('');
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
 
   useEffect(() => {
-    setArticles(fetchArticles(page, sortingOption));
-  }, [page, sortingOption]);
+    setArticles(fetchArticles(page, sortingOption, searchInput));
+  }, [page, sortingOption, searchInput]);
 
   return (
     <>
       <div className="article-grid">
         <div className="article-filters">
-          <SearchBox />
+          <SearchBox setSearchInput={setSearchInput} />
           <SortingMenu setSortingOption={setSortingOption} />
         </div>
         <div className="articles-container">
