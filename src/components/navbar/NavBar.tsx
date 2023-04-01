@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.scss';
+// import { ErrorBoundary } from 'react-error-boundary';
 
 export const NavBar = () => {
   const [show, handleShow] = useState(false);
@@ -20,6 +21,7 @@ export const NavBar = () => {
   }, []);
 
   return (
+    // <ErrorBoundary fallback={<div>Something went wrong</div>}>
     <div className={`navBar ${show && 'navBar__black'}`}>
       <div className="navBar__contents">
         <button className="navBar__button-logo" onClick={() => navigate('/')}>
@@ -39,5 +41,6 @@ export const NavBar = () => {
         </button>
       </div>
     </div>
+    // </ErrorBoundary>
   );
 };

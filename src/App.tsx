@@ -9,6 +9,7 @@ export const App = () => {
       {/* <React.StrictMode> */}
       <Router>
         <NavBar />
+
         <br />
         <Routes>
           <Route path="*" element={<p>Not Found</p>} />
